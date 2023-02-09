@@ -8,13 +8,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "micro_user_table")
 public class User {
 
 	@Id
 	@Column(name = "ID")
-
+	@JsonIgnore
 	private String userId;
 
 	private String name;
